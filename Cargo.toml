@@ -10,8 +10,7 @@ categories = ["embedded", "no-std", "hardware-support"]
 edition = "2018"
 
 [dependencies]
-embassy-traits = "0.1.0"
-embedded-hal = "0.2.3"
+embedded-hal-async = "0.1.0-alpha.1"
 serde = { version = "1.0.104", optional = true, features = ["derive"] }
 defmt = { version = "0.2.3", optional = true }
 
