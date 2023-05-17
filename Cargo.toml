@@ -10,10 +10,9 @@ categories = ["embedded", "no-std", "hardware-support"]
 edition = "2018"
 
 [dependencies]
-embedded-hal-async = "0.1.0-alpha.1"
+embedded-hal-async = "0.2.0-alpha.1"
 serde = { version = "1.0.104", optional = true, features = ["derive"] }
-defmt = { version = "0.2.3", optional = true }
+defmt = { version = "0.3.4", optional = true }
 
 [dev-dependencies]
 linux-embedded-hal = "0.3.0"
-
