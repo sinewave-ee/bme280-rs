@@ -62,7 +62,7 @@
 //! println!("Pressure = {} pascals", measurements.pressure);
 //! ```
 
-use embedded_hal_async::{delay::DelayUs, i2c::I2c};
+use embedded_hal_async::{delay::DelayNs, i2c::I2c};
 #[cfg(feature = "serde")]
 use serde::Serialize;
 
@@ -308,7 +308,7 @@ pub struct BME280<I2C, D> {
 impl<I2C, D, IE> BME280<I2C, D>
 where
     I2C: I2c<Error = IE>,
-    D: DelayUs,
+    D: DelayNs,
 {
     /// Create a new BME280 struct using the primary I²C address `0x76`
     pub fn new_primary(i2c: I2C, delay: D) -> Self {
